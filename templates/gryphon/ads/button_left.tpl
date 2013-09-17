@@ -1,0 +1,16 @@
+{#gryphon/ads/button_left.tpl#}
+
+
+{#<div class="advertisement button">
+<!--/* OpenX iFrame Tag v2.8.7 */-->
+
+<iframe id='adfe653a' name='adfe653a' src='http://ads.thesn.net/openx/www/delivery/afr.php?n=adfe653a&amp;zoneid=5&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;ct0=INSERT_CLICKURL_HERE' frameborder='0' scrolling='no' width='120' height='90' allowtransparency='true'><a href='http://ads.thesn.net/openx/www/delivery/ck.php?n=a2d9f0f0&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://ads.thesn.net/openx/www/delivery/avw.php?zoneid=5&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=a2d9f0f0&amp;ct0=INSERT_CLICKURL_HERE' border='0' alt='' /></a></iframe>
+<script type='text/javascript' src='http://ads.thesn.net/openx/www/delivery/ag.php'></script>
+
+</div>#}
+<div class="ad button left">
+<!--/* OpenX iFrame Tag v2.8.10 */-->
+
+{#<iframe id='a0b4adcc' name='a0b4adcc' src='http://ads.thesn.net/openx/www/delivery/afr.php?n=a0b4adcc&amp;zoneid=5&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;ct0=INSERT_CLICKURL_HERE' frameborder='0' scrolling='no' width='120' height='90' allowtransparency='true'><a href='http://ads.thesn.net/openx/www/delivery/ck.php?n=aef381ca&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://ads.thesn.net/openx/www/delivery/avw.php?zoneid=5&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=aef381ca&amp;ct0=INSERT_CLICKURL_HERE' border='0' alt='' /></a></iframe>
+<script type='text/javascript' src='http://ads.thesn.net/openx/www/delivery/ag.php'></script>#}
+</div>

@@ -1,0 +1,49 @@
+
+
+{% extends isXHR ? 'ceres/ceres/base.ajax.mbl' : 'ceres/ceres/base.mbl' %}
+
+{% block title %}{{ listing.name }}{% endblock %}
+{% block content %}
+	<article>
+	
+		<h1>{{ listing.name }}</h1>
+		{% for cat in listing.categories %}
+			<h5><a href="{{ ('ceres:ceres/search?category='~cat.uid)|url }}">{{ cat.name }}</a></h5>
+		{% endfor %}
+
+		<h3><a href="{{ listing.urlMap }}">{{ listing.address }}</a></h3>
+		
+		<div id="canvas" data-latlon="{{ listing.latlon }}" data-marker="true"</div>
+		
+		<hr />
+		
+		{{ listing.description }}
+		
+		<hr class="spacer">
+		
+		{% if listing.phone %}
+			<strong>Phone:</strong>
+			{{ listing.phone }}<br />
+		{% endif %}
+		
+		{% if listing.email %}
+			<strong>Email:</strong>
+			<a href="mailto:{{ listing.email }}">{{ listing.email }}</a><br />
+		{% endif %}
+
+		{% if listing.url %}
+			<strong>Website:</strong>
+			<a href="{{ listing.url }}">{{ listing.url }}</a><br />
+		{% endif %}
+		
+		<hr />
+		
+		<h2>Features:</h2>
+		
+		{% for feature, label in config.get('ceres:features') %}
+			{% if feature|in(listing.features) %}
+				&#x2714; {{ label }}<br />
+			{% endif %}
+		{% endfor %}
+	</article>
+{% endblock %}

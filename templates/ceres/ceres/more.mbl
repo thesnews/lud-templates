@@ -1,0 +1,50 @@
+
+
+{% extends 'ceres/ceres/base.mbl' %}
+{% block navActive %}more{% endblock %}
+
+{% block content %}
+
+	<div class="col1">
+		<section>
+			<h1>More mobile-ready content</h1>
+			
+			<ul>
+				<li>
+					<form method="get" action="{{ 'search'|url }}">
+						<input type="search" name="q" placeholder="Search Daily Tar Heel" />
+						<input type="submit" name="submit" value="Go" width="24" height="24" alt="search">			
+					</form>
+				</li>
+				<li><a href="{{ '/'|url }}">Front Page</a></li>
+				<li><a href="{{ 'section/news'|url }}">News</a></li>
+				<li><a href="{{ 'section/sports'|url }}">Sports</a></li>
+				<li><a href="{{ 'section/diversions'|url }}">Diversions</a></li>
+				<li><a href="{{ 'section/opinion'|url }}">Opinion</a></li>
+				<li><a href="{{ 'section/campus'|url }}">Campus</a></li>
+				<li><a href="{{ 'section/city'|url }}">City</a></li>
+				<li><a href="{{ 'section/crime'|url }}">Crime</a></li>
+				<li><a href="{{ 'section/state'|url }}">State</a></li>
+				<li><a href="{{ 'section/arts'|url }}">Arts</a></li>
+				<li><a href="{{ 'gallery'|url }}">Galleries</a></li>
+			</ul>
+		</section>
+	</div>
+	<div class="col2">
+		<section>
+			<h1>Terms and conditions</h1>
+
+			<p>
+				Users are solely responsible for reviewing and making decisions and agreements or contracts based on the information provided in this Guide and agree to hold The Daily Tar Heel harmless and waive any liability of The Daily Tar Heel for any or all disputes involving information provided in this guide.
+			</p>
+			
+			<p>
+				Although most changes are likely to be minor, The Daily Tar Heel may change its Terms of Service from time to time, and at The Daily Tar Heel's sole discretion. The Daily Tar Heel encourages visitors to frequently check this page for any changes to its Terms of Service. Your continued use of this site after any change in this Terms of Service policy will constitute your acceptance of such change.			
+			</p>
+			
+			<a href="{{ 'gryphon:page/privacy'|url }}">Privacy Policy</a>
+			
+		</section>
+	</div>
+	
+{% endblock %}

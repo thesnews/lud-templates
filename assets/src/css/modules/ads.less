@@ -1,0 +1,69 @@
+.ad{
+	display:inline-block;
+	border: 1px solid #ccc;
+	background-color: #f1f1f1;
+
+	&.wide-button {
+		width: 232px;
+		height: 90px;
+	}
+	&.leaderboard{
+		width: 728px;
+		height: 90px;
+	}
+
+	&.rectangle	{
+		width: 300px;
+		height: 250px;
+	}
+
+	&.tower{
+		width: 120px;
+		height: 250px;
+	}
+
+	&.button	{
+		width: 120px;
+		height: 90px;
+	}
+}
+
+.article_ad {
+  display: block;
+  img{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  }
+}
+
+.ad-box {
+	.box;
+	background: @grayLighter;
+
+	color: @grayDark;
+	font-weight: 300;
+	a {
+		color: @grayDark;
+	}
+}
+
+@media(min-width: 980px)and (max-width:1200px){
+  .ad {
+	border: 1px solid #ccc;
+
+	display: inline-block;
+
+	&.button, &.wide-button {
+		&.right {
+		  margin-right: -65px;
+		}
+
+		&.left {
+		  margin-left: -65px;
+		}
+
+	 }
+	}
+
+}

@@ -1,0 +1,141 @@
+
+@import "bootstrap/bootstrap.less";
+@import "bootstrap/responsive.less";
+@import "modules/base.less";
+
+/* Travis Learns */
+body {
+  	font-family: @Oxygen;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    font-style: none;
+    text-transform: none;
+    color: @CoolGray;
+}
+
+a	{
+	color: @red;
+}
+
+a:hover	{
+	color: @grayDark;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-style: normal;
+	margin: 0;
+	padding: 0;
+		a	{
+			color: @red;
+		}
+}
+
+h1	{
+	  font-size: 31px;
+	  font-family: @serifFontFamily;
+	  color: @red;
+}
+
+h2 {
+	color: @red;
+    font-size: 24px;
+    font-family: @sansFontFamily;
+    font-style: normal;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    font-family: @serifFontFamily;
+    font-style: normal;
+    font-weight: 300;
+}
+
+h4	{
+	font-family: @Oxygen;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.summarized-story h3{
+	font-size: 24px;
+    font-weight: normal;
+	line-height: 29px;
+}
+
+.copy {
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 20px;
+}
+
+.transition	{
+	-o-transition: .25s;
+	-ms-transition: .25s;
+	-moz-transition: .25s;
+	-webkit-transition: .25s;
+	transition: .25s;
+}
+
+@textShadow: 1px 2px 2px @grayDarker;
+@serif: adobe-garamond-pro;
+
+/*@red: #8e1a2e;*/
+@red: #b60033;
+@blue: #0065a4;
+@CoolGray: #444545;
+@redDark: #660300;
+@salmon: #d66c51;
+@blueLite: #a0bbdd;
+@tan: #e3daaf;
+
+@import "modules/dining_guide.less";
+@import "modules/article-types.less";
+@import "modules/article.less";
+@import "modules/utils.less";
+@import "bootstrap/accordion.less";
+@import "modules/polls.less";
+@import "modules/calendar.less";
+@import "modules/utils.less";
+@import "modules/responsive.less";
+@import "modules/boxes.less";
+@import "modules/ads.less";
+@import "modules/multimedia.less";
+@import "modules/media-box.less";
+@import "modules/flexslider.less";
+@import "modules/dropnav.less";
+@import "modules/page.less";
+@import "modules/properties.less";
+@import "modules/results.less";
+@import "modules/searchform.less";
+@import "modules/ticker.less";
+@import "modules/scores.less";
+
+.breaking {
+    h4 {
+        #gradient > .vertical(#b60033, #660300);
+        padding: 10px;
+        color: #fff;
+        float: left;
+        font-size: 16px;
+        margin-bottom: 5px;
+        clear: both;
+    }
+}
+.breaking-box {
+    clear: both;
+    margin-top: 10px;
+    background-image: url('../images/grid_bg.png');
+    padding: 5px;
+    border-top:none;
+    font-size: 11px;
+
+    a {
+        display: inline-block;
+        font-weight: bold;
+        font-size: 22px;
+    }
+}

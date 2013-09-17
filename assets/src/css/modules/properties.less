@@ -1,0 +1,104 @@
+.property-listing {
+    header.listing {
+        #gradient > .vertical(@grayDarker, @CoolGray);
+        padding: 20px 10px 5px 20px;
+        font-family:@Merriweather;
+        color: #fff;
+        border-left: solid @red 3px;
+
+        a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        h1 {
+            font-weight: normal;
+            font-size: 30px;
+            color:@white;
+        }
+    }
+
+    h2 {
+        color: @white;
+        line-height: 1em;
+        font-weight: normal;
+    }
+
+    .box-wrapper {
+        padding: 10px;
+    }
+
+    .listing-features {
+    	
+        text-align: center;
+
+        h3 {
+            color: @red;
+            font-weight:bold;
+            line-height: 1em;
+            text-align:center;
+            font-size: 50px;
+            margin: 0;
+            padding: 0;
+        }
+        h4 {
+            color: @black;
+            line-height: 1em;
+            font-weight: normal;
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+            text-align:center;
+        }
+        h5 {
+        	padding-left:10px;
+            text-align: left;
+            color: @red;
+            font-size: 16px;
+            font-weight: normal;
+            margin-top: 20px;
+            em {
+                font-style: normal;
+                color: @gray;
+            }
+        }
+    }
+}
+
+.listing-sidebox {
+    background: @grayLighter;
+
+    strong {
+   		padding-left:10px;
+        color: @blueDark;
+    }
+    & > div {
+        padding: 10px;
+    }
+
+    ul {
+    	list-style: none;
+        color: @gray;
+        
+        a{
+        color: @blueDark
+        }
+    }
+
+    h3 {
+    	font-weight: bold;
+        font-size: 16px;
+        line-height: 1em;
+        #gradient > .vertical(@grayDarker, @CoolGray);
+        color: #fff;
+        padding: 5px 10px;
+    }
+}
+
+.listing-features{
+	border-left: solid @red 3px;
+}
+
+.carousel-indicators {
+	list-style:none;
+}

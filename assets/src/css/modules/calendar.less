@@ -1,0 +1,95 @@
+article.event{
+	header{
+		h2,h3 a{
+			font-weight: 400;
+			color: @gray;
+			text-transform: none;
+		}
+		span.aside{
+			color: @red;
+			font-weight: 300;
+		}
+	}
+
+}
+
+#side-calendar {
+	text-align: center;
+	background: #f1f1f1;
+	font-size: 12px;
+
+	width: 100%;
+	border: 1px solid darken(#e1e1e1, 10%);
+
+	tr {
+		&.month, &.day {
+			#gradient > .vertical(#333, darken(#333, 5%));
+			color: #fff;
+			border-bottom: 0;
+			td {
+				border: 0;
+			}
+			a {
+				color: #fff;
+			}
+		}
+		&.selected {
+			background: lighten(@redDark, 75%);
+		}
+
+		border-bottom: 1px solid darken(#e1e1e1, 10%);
+	}
+
+	td {
+		a {
+			display: block;
+			width: 100%;
+		}
+		margin: 0;
+		padding: 0;
+
+		border-right: 1px solid darken(#e1e1e1, 10%);
+		&:last-child {
+			border-right: 0;
+		}
+
+		.selected {
+			background: @red;
+			color: #fff;
+		}
+
+	}
+}
+#form_eventSubmit{
+
+	fieldset{
+		display: block;
+		max-width: 75%;
+		margin: 0 auto;
+	}
+
+	legend{
+		font-weight: bold;
+	}
+
+	input[type=text],textarea{
+		width: 96%;
+	}
+
+	select{
+		width: 32%;
+	}
+
+	label{
+		font-weight: bold;
+	}
+	span.required{
+		font-weight: bold;
+		color:@red;
+	}
+
+	button{
+		margin-top: 20px;
+	}
+
+}

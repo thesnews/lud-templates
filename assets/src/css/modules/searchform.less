@@ -1,0 +1,93 @@
+.search-tabs {
+	margin-bottom: 0;
+	padding-bottom: 0;
+	font-weight: bold;
+	font-family: @Merriweather;
+
+	li {
+		width: 25%;
+		text-align: center;
+		a {
+			#gradient > .vertical(@grayDarker, @CoolGray);
+			color: @white;
+			&:hover {
+				background:@red;
+			}
+		}
+
+
+		&.active {
+
+			a {
+				background: @grayLighter;
+				color: @black;
+				&:hover {
+					background: @red;
+					color: @white;
+					border-color: @grayLighter;
+				}
+			}
+			&:hover {
+				color: #136999;
+			}
+		}
+	}
+}
+form.search {
+	background: @grayLighter;
+	padding: 10px;
+	margin: 0;
+
+	input[type="checkbox"] {
+		position: relative;
+		top: -4px;
+	}
+
+	h5 {
+		font-size: 19px;
+		font-family: @Oxygen;
+		font-weight: bold;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		margin-bottom: 10px;
+	}
+
+	.option-wrapper {
+		background: @grayLighter;
+		padding: 10px;
+		border-left:solid @red 3px;
+	}
+
+	h2 {
+		#gradient > .vertical(@grayDarker, @CoolGray);
+		color: @white;
+		font-size: 16px;
+		font-weight: normal;
+		padding: 16px 0px 4px 16px;
+		border-left:solid @red 3px;
+		line-height: 1em;
+		margin-bottom: 0;
+		cursor: pointer;
+	}
+
+	fieldset {
+		background: #e4e4e4;
+		border: 1px solid #b1b1b1;
+		padding: 10px;
+	}
+
+	.button-bar {
+		text-align: center;
+		margin-top: 20px;
+
+		.btn {
+			color: @black;
+			margin-right: 20px;
+		}
+	}
+}
+
+select, input	{
+	width:90%;
+}

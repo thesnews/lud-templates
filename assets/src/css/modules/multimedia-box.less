@@ -1,0 +1,84 @@
+
+.multimedia-box {
+	min-height: 100px;
+	min-width: 600px;
+	max-width: 750px;
+
+	margin: auto;
+	background: @gray 0 0;
+	
+	.multimedia-fluid {
+		border:1px solid red;
+		width: 300px;
+		height: 900px;
+	}
+
+	a {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		display: block;
+		position: relative;
+		/*text-indent: -99999px;*/
+		
+		aside {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			text-align: center;
+			color: #fff;
+			text-indent: 0;
+			font-weight: 700;
+			background: rgba(51,51,51,0.9);
+
+			span {
+				padding: 5px 10px;
+				display: block;
+			}
+		}
+	}
+	.bigsquare a {
+		width: 300px;
+		height: 300px;
+		overflow: hidden;
+		background-color: green;
+	}
+	.square a {
+		width: 150px;
+		height: 150px;
+		background-color: blue;
+	}
+	.horizontal a {
+		width: 300px;
+		height: 150px;
+		overflow: hidden;
+		background-color: red;
+	}
+	.vertical a {
+		width: 150px;
+		height: 300px;
+		background-color: purple;
+	}
+}
+
+.media-caption {
+	font-size: 12px;
+
+	aside {
+		padding: 4px;
+		background: #e1e1e1;
+		font-size: 12px !important;
+	}
+}
+
+
+// one step under max
+@media only screen and (max-width: 1200px) {
+
+	.multimedia-box {
+		max-width: 600px;
+	}
+	
+}
+

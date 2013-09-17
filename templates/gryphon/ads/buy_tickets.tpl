@@ -1,0 +1,1 @@
+<a href = "http://www.liberty.edu/flames/index.cfm?PID=16939" ><img src = "{{ 'assets/dist/images/buytickets.png'|asset }}"></a>

@@ -1,0 +1,13 @@
+
+{% helper config %}
+{% set title %}{% block title %}{% endblock %}{% endset %}
+<div>
+	<header>
+		<a href="#" class="close"><span>Close</span></a>
+		<h1>
+			{{ title|default("Listing") }}
+		</h1>
+	</header>
+	
+	{% block content %}{% endblock %}
+</div>

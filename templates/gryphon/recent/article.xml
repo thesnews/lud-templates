@@ -1,0 +1,49 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+{% helper config %}
+{% helper utilityHelper as util %}
+{% set mostRecent = 0 %}
+
+{% fetch articles from article with [
+	'limit': 15,
+	'order': 'created desc',
+	'where': 'status = 1'
+] %}
+{% for article in articles %}{% if article.created > mostRecent %}{% set mostRecent = article.created %}{% endif %}{% endfor %}
+
+{% fetch temp from article with [
+	'where': 'uid = 32818',
+	'limit': '1'
+] %}
+
+{% set rssLastBuildDate = mostRecent.created|date('r') %}
+	<channel>
+		<title>{{ config.get('publication:name') }}</title>
+		<link>{{ 'recent/article'|url }}.xml</link>
+		<description>Stories from {{ config.get('publication:name') }}</description>
+		<language>en-us</language>
+		<generator>Gryphon {{ config.appVersion }} (Foundry {{ config.foundryVersion }})</generator>
+		<lastBuildDate>{{ rssLastBuildDate }}</lastBuildDate>
+		<webMaster>webmaster@dailytarheel.com</webMaster>
+
+		<item>
+			<title>{{ temp[0].headline }}</title>
+			<link>{{ temp[0].url }}</link>
+			<description>{{ temp[0].abstract_formatted|striptags }}</description>
+			<pubDate>{{ temp[0].created|date('c') }}</pubDate>
+			<guid>{{ temp[0].url }}</guid>
+		</item>
+
+		{% for article in articles %}
+		<item>
+			<title>{{ article.headline }}</title>
+			<link>{{ article.url }}</link>
+			<description>{{ article.abstract_formatted|striptags }}</description>
+			<pubDate>{{ article.created|date('c') }}</pubDate>
+			<guid>{{ article.url }}</guid>
+		</item>
+		{% endfor %}
+	</channel>
+</rss>

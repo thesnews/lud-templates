@@ -1,0 +1,60 @@
+
+
+{% extends 'ceres/ceres/base.mbl' %}
+
+{% block content %}
+
+	<div class="col1"><div class="box">
+		<div id="canvas" data-latlon="{{ config.get('ceres:map:default:latLon') }}" style="width:100%"></div>
+	</div></div>
+	<div class="col2" id="listings-container"><div class="box">
+
+	
+		{% if listings.length %}
+
+			<div class="pagination">
+			{% for page in pagination %}
+				<a href="{{ page.url }}">{{ page.label }}</a>
+			{% endfor %}
+			</div>
+
+			<ul id="listings">
+			{% for listing in listings %}
+				
+				<li id="listing-{{ listing.uid }}" data-latlon="{{ listing.latlon }}" data-taphref="{{ listing.urlListing }}">
+				
+					<a href="{{ listing.urlMap }}"><img src="{{ listing.__urlStaticMap('65x65') }}" /></a>
+					<section>
+						
+						<h1><a href="{{ listing.urlListing }}">{{ listing.name }}</a></h1>
+						<h2>{{ listing.address }}</h2>
+						{% for cat in listing.categories %}
+							<h5><a href="{{ ('ceres:ceres/search?category='~cat.uid)|url }}">{{ cat.name }}</a></h5>
+						{% endfor %}
+						<br />
+						
+						<a href="{{ listing.urlListing }}">Full listing</a>
+						
+						&#x25CF;						
+						
+						<a href="{{ listing.urlMap }}">Map It! &rarr;</a>
+						
+					</section>
+				</li>
+			{% endfor %}
+			</ul>
+
+
+			<div class="pagination">
+			{% for page in pagination %}
+				<a href="{{ page.url }}">{{ page.label }}</a>
+			{% endfor %}
+			</div>
+
+		{% else %}
+			No listings found.
+		{% endif %}		
+
+	</div></div>
+
+{% endblock %}
